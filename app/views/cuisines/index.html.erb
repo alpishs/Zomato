@@ -1,0 +1,47 @@
+<!--Cuisines Table data-->
+<h1>Cuisines</h1>
+
+<table  id="myTable" class="table table-striped" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Cuisine.all.each do |cuisine| %>
+      <tr>
+        <td><%= cuisine.id %></td>
+        <td><%= cuisine.name  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<!--Restaurant Table data-->
+
+<h1>Restaurant</h1>
+
+<table  id="myTable1" class="table table-striped" >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost for Two</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Restaurant.all.each do |rest| %>
+      <tr>
+        <td><%= rest.name %></td>
+        <td><%= rest.cost_for_two %></td>
+         <td><%= rest.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
